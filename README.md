@@ -29,4 +29,4 @@ npx prisma generate
 npm start
 ```
 6. Test Api's
--  Use Postman collection attached with code reposition "E commerce Assignment.postman_collection.json" 
+-  Use Postman collection attached with code repository "E commerce Assignment.postman_collection.json" 
