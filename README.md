@@ -1,6 +1,6 @@
-# Order Management System (Node.js + Express + TypeScript) - In-memory
+# Order Management System (Node.js + Express + TypeScript) - using PgSql Database
 
-Minimal Order Management REST API (prototype). Uses in-memory arrays so you can run it without setting up a database.
+Minimal Order Management REST API (prototype). Uses PgSql database to store database.
 
 ## Features
 - Add & list products
@@ -17,3 +17,16 @@ Minimal Order Management REST API (prototype). Uses in-memory arrays so you can 
 2. Install
 ```bash
 npm install
+```
+3. Update DB connection string in .env file
+4. Migrate DB
+```bash
+npx prisma migrate dev --name init
+npx prisma generate
+```
+5. Run project
+```bash
+npm start
+```
+6. Test Api's
+-  Use Postman collection attached with code reposition "E commerce Assignment.postman_collection.json" 
