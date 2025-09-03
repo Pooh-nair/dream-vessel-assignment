@@ -1,0 +1,235 @@
+{
+	"info": {
+		"_postman_id": "3730dd18-9ebf-4a05-986a-bf5ce0b6cc93",
+		"name": "E commerce Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45724802"
+	},
+	"item": [
+		{
+			"name": "Save Product",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Product 1\",\n    \"price\": 10000,\n    \"description\": \"This is demo description\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/products",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Product 1\",\n    \"price\": 10000,\n    \"description\": \"This is demo description\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/products",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Place Order",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"products\": [\"00de793b-ba5b-49a2-b264-0a9c33566509\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/orders",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Order by OrderID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"products\": [\"00de793b-ba5b-49a2-b264-0a9c33566509\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/orders/b2e030fd-c5fd-4030-a392-a3946e2b6eb3",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"orders",
+						"b2e030fd-c5fd-4030-a392-a3946e2b6eb3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Request Refund",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"products\": [\"00de793b-ba5b-49a2-b264-0a9c33566509\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/orders/b2e030fd-c5fd-4030-a392-a3946e2b6eb3/refund",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"orders",
+						"b2e030fd-c5fd-4030-a392-a3946e2b6eb3",
+						"refund"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refund Initiated",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"products\": [\"00de793b-ba5b-49a2-b264-0a9c33566509\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/orders/a0158085-9e6b-4d84-9bb2-424c4f28bf5f/refund/initiate",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"orders",
+						"a0158085-9e6b-4d84-9bb2-424c4f28bf5f",
+						"refund",
+						"initiate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refund Cancel",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"products\": [\"00de793b-ba5b-49a2-b264-0a9c33566509\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/orders/a0158085-9e6b-4d84-9bb2-424c4f28bf5f/refund/cancel",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"orders",
+						"a0158085-9e6b-4d84-9bb2-424c4f28bf5f",
+						"refund",
+						"cancel"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "http://localhost:3000",
+			"type": "default"
+		}
+	]
+}
